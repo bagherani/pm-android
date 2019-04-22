@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingBottom="2dp"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="2dp">
+
+    <ImageButton
+        android:id="@+id/btnViewHistory"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:background="#0fff"
+        android:contentDescription="@string/view_history"
+        android:src="@android:drawable/ic_menu_recent_history"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/txtRegisterName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layoutDirection="rtl"
+                android:textDirection="rtl"/>
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/register_progress"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="5"
+                app:rcBackgroundColor="#E9EAEC"
+                app:rcBackgroundPadding="1dp"
+                app:rcMax="300"
+                app:rcProgress="0"
+                app:rcProgressColor="#FFBB33"
+                app:rcRadius="4dp"
+                app:rcSecondaryProgress="0"/>
+
+            <TextView
+                android:id="@+id/txtValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="2"
+                android:layoutDirection="rtl"
+                android:textAlignment="textEnd"
+                android:textDirection="rtl"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
